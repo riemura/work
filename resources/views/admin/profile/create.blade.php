@@ -1,4 +1,4 @@
-@extend('layouts.profile')
+@extends('layouts.profile')
 @section('title', 'プロフィール')
 @section('content')
     <div class="container">
