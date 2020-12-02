@@ -56,7 +56,7 @@ class ProfileController extends Controller
         unset($profile_form['remove']);
         unset($profile_form['_token']);
         $profile->fill($profile_form)->save();
-        return redirect('admin/news');
+        return redirect('admin/profile/');
     }
       
     public function delete(Request $request) {
