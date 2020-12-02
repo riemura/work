@@ -70,7 +70,7 @@ class NewsController extends Controller
         unset($news_form['remove']);
         unset($news_form['_token']);
         $news->fill($news_form)->save();
-        return redirect('admin/news');
+        return redirect('admin/news/');
     }
     
     public function delete(Request $request) {
