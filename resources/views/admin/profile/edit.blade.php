@@ -23,13 +23,13 @@
 			           <div class="form-group row">
 			               <label class="col-md-2">性別</label>
 			               <div class="col-md-10">
-			                   <input class="form-control" name="gender" row="20"{{$profile_form->gender}}>
+			                   <input class="form-control" name="gender" rows="20"{{$profile_form->gender}}>
 			               </div>
 			           </div>
 		               <div class="form-group row">
 			               <label class="col-md-2">趣味</label>
 			               <div class="col-md-10">
-			                   <input class="form-control" name="hobby" row="20"{{$profile_form->hobby}}>
+			                   <input class="form-control" name="hobby" rows="20"{{$profile_form->hobby}}>
 			               </div>
 			           </div>
 			           <div class="form-group row">
@@ -46,8 +46,20 @@
 			               </div>
 			           </div>
 			        </form>
+			        <div class="row mt-5">
+			        	<div class="col-md-4 mx-auto">
+			        		<h2>編集履歴</h2>
+			        		<ul class="list-group">
+			        			@if ($profile_form->histories != NULL)
+			        				@foreach ($profile_form->histories as $history)
+			        					<li class="list-group-item">{{ $history->edited_at }}</li>
+			        				@endforeach
+			        			@endif
+			        		</ul>
+			        	</div>
+			        </div>
 				</div>
-			</div>
+			</div>	
 		</div>	
 @endsection
         
