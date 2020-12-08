@@ -53,7 +53,6 @@ class ProfileController extends Controller
         $this->validate($request, Profile::$rules);
         $profile = Profile::find($request->id);
         $profile_form = $request->all();
-        return redirect('admin/profile/');
  
         unset($profile_form['remove']);
         unset($profile_form['_token']);
