@@ -13,7 +13,7 @@
 				<div class="col-md-8">
 					<form action="{{ action('Admin\ProfileController@index') }}" method="get">
 						<div class="form-group row">
-							<label class="col-md-2">プロフィール編集</label>
+							<label class="col-md-2">プロフィール検索</label>
 							<div class="col-md-8">
 								<input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
 							</div>
@@ -41,7 +41,7 @@
 									<tr>
 										<th>{{ $profile->id }}</th>
 										<td>{{ \Str::limit($profile->name, 100) }}</td>
-										<td width="100%">{{ \Str::limit($profile->gender, 250) }}</td>
+										<td>{{ \Str::limit($profile->gender, 250) }}</td>
 										<td>
 											<div>
 												<a href="{{ action('Admin\ProfileController@edit', ['id' => $profile->id]) }}">編集</a>
