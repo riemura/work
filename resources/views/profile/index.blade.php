@@ -18,13 +18,10 @@
                                 <div class="hobby p-2">
                                     <h1>{{ str_limit($headline->hobby, 20) }}</h1>
                                 </div>
-                                <div class="introduction p-2">
+                                <div class="introduction text-break">
                                     <h1>{{ str_limit($headline->introduction, 650) }}</h1>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="body mx-auto">{{ str_limit($headline->body, 650) }}</p>
                         </div>
                     </div>
                 </div>
@@ -49,9 +46,9 @@
                                 <div class="hobby">
                                     {{ str_limit($post->hobby, 30) }}
                                 </div>
-                                <textarea class="introduction mt-3">
-                                    {{ str_limit($post->introduction, 1500) }}
-                                </textarea>
+                                <div class="introduction text-break">
+                                    {{ str_limit($post->introduction, 650) }}
+                                </div>
                             </div>
                         </div>
                     </div>
