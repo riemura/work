@@ -20,7 +20,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <p class="body p-2 text-break">{{ str_limit($headline->body, 650) }}</p>
+                            <p class="body mx-auto">{{ str_limit($headline->body, 650) }}</p>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                                 <div class="title">
                                     {{ str_limit($post->title, 150) }}
                                 </div>
-                                <div class="body mt-3 text-break">
+                                <div class="body mt-3">
                                     {{ str_limit($post->body, 1500) }}
                                 </div>
                             </div>
@@ -54,6 +54,5 @@
                 @endforeach
             </div>
         </div>
-    </div>
     </div>
 @endsection
